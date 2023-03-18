@@ -1,1 +1,31 @@
-<p>header works!</p>
+<header>
+    <nav class="navbar">
+        <div class="col-md-3 icon-content">
+            <a [routerLink]="['/']">
+                <img
+                    src="assets/img/pokemon-logo.png"
+                    alt="POKÉMON LOGO"
+                />
+            </a>
+        </div>
+        <div class="col-md-3 linkbar-content">
+            <ul>
+                <a [routerLink]="['/pokemon-pokedex']">
+                    <li>
+                        Pokedex
+                    </li>
+                </a>
+                <a [routerLink]="['/about']">
+                    <li>
+                        Sobre
+                    </li>
+                </a>
+                <a [routerLink]="['/new-pkmn']" class="new-pkmn">
+                    <li>
+                        Criar POKEMON
+                    </li>
+                </a>
+            </ul>
+        </div>
+    </nav>
+</header>

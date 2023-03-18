@@ -1,0 +1,92 @@
+@import '../assets/sass/variables';
+
+header{
+    margin-bottom: 20vh;
+
+    nav.navbar{
+        top: 0;
+        width: 100%;
+        z-index: 100;
+        display: flex;
+        position: fixed;
+        justify-content: space-around;
+        background-color: #f0f8ffd2;
+        border-bottom: 1px solid var(--color-letter);
+        backdrop-filter: blur(50px);
+        
+        div.icon-content{
+            img{
+                width: 174px;
+                height: 65px;
+                transition: $tran-03;
+
+                &:hover{
+                    transition: $tran-03;
+                    filter: drop-shadow(2px 4px 6px #000000);
+                }
+            }
+        }
+
+        div.linkbar-content{
+            ul{
+                list-style: none;
+                text-align: center;
+                align-items: center;
+
+                a{
+                    margin-left: 2vw;
+                    text-decoration: none;
+
+                    &:first-child{
+                        margin-left: 0;
+                    }
+
+                    li{
+                        font-size: 0.8rem;
+                        color: var(--color-letter);
+                        font-family: 'Press Start 2P', sans-serif;
+
+                        &:hover{
+                            color: #708090;
+                        }
+                    }
+                }
+
+                a.new-pkmn{
+                    padding: 5px 10px;
+                    border-radius: 20px;
+                    border: 1px solid #ff0000;
+                    background-color: #ff0000;
+
+                    li{
+                        color: #f0f8ff;
+                    }
+
+                    &:hover{
+                        transition: $tran-03;
+                        background-color: #d9e0e7;
+
+                        li{
+                            color: #ff0000;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    div, div > ul{
+        display: flex;
+        justify-content: center;
+    }
+
+    dl, ol, ul {
+        margin-top: 0;
+        margin-bottom: 0rem;
+    }
+
+    ol, ul {
+        padding-left: 0rem;
+    }
+
+}

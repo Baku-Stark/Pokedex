@@ -1,0 +1,40 @@
+footer{
+    width: 100%;
+    padding: 20px;
+    background-color: var(--backgroud);
+
+    div.top-footer{
+        text-align: center;
+
+        img{
+            width: 50%;
+        }
+
+        img.angular-icon{
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+    div.bot-footer{
+        text-align: center;
+
+        p{
+            opacity: .7;
+            font-style: italic;
+
+            a{
+                text-decoration: none;
+                color: #212529;
+
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    hr{
+        background-color: #616060;
+    }
+}

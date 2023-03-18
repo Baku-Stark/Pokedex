@@ -10,9 +10,7 @@
 
 <br>
 
-<img height="100" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-plain.svg" />
-
-<img height="50" src="assets/img/pokeapi_256.png" />
+<img height="100" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-plain.svg" /> <img height="50" src="assets/img/pokeapi_256.png" />
 
 
 </div>

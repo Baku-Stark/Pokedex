@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/pages/home/home.component';
 import { AboutComponent } from './components/pages/about/about.component';
 import { PokemonComponent } from './components/pages/pokemon/pokemon.component';
+import { NewPkmnComponent } from './components/pages/new-pkmn/new-pkmn.component';
 
 const routes: Routes = [
   {
@@ -16,8 +17,12 @@ const routes: Routes = [
     component: AboutComponent
   },
   {
-    path: 'pokemon', title:"Pokémon | Pokedex",
+    path: 'pokemon-pokedex', title:"Pokémon | POKEDEX",
     component: PokemonComponent
+  },
+  {
+    path: 'new-pkmn', title:"REGISTRAR POKÉMON",
+    component: NewPkmnComponent
   },
 ];
 
