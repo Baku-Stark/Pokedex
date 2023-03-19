@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./new-pkmn.component.scss']
 })
 export class NewPkmnComponent {
-
+  btnText = 'Retornar para a HOME'
 }

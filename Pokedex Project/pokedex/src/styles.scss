@@ -13,12 +13,17 @@
     font-family: 'Poppins', sans-serif;
 }
 
+main{
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
 div.col-12.header{
     margin-bottom: 5vh !important;
     text-align: center;
 
     h2{
-        font-size: 1.2rem;
+        font-size: 2.2rem;
         animation: rowColors 2.5s linear infinite;
         font-family: 'Press Start 2P', sans-serif;
     }
@@ -27,6 +32,10 @@ div.col-12.header{
         opacity: .7;
         font-style: italic;
     }
+}
+
+div.col-12.body{
+    margin-bottom: 5vh !important;
 }
 
 @keyframes rowColors{

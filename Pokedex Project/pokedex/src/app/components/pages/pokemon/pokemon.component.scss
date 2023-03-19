@@ -1,0 +1,108 @@
+@import '../../assets/sass/variables';
+
+input#search{
+    width: 75%;
+    padding: 10px;
+}
+
+button#search{
+    border: none;
+    padding: 13px 15px;
+    background-color: #dbe3eb;
+
+    i{
+        font-weight: bold;
+    }
+
+    &:hover{
+        background-color: #bcc3ca;
+    }
+}
+
+div.col{
+    gap: 20px;
+    @include GridLayout-Columns(repeat(3, 1fr));
+
+    @include screenTablet-low{
+        @include GridLayout-Columns(repeat(2, 1fr));
+    }
+
+    @include screenPhone{
+        @include GridLayout-Columns(repeat(1, 1fr));
+    }
+
+    div.card-content{
+        padding: 10px;
+        border-radius: 20px;
+        background-color: #111111;
+
+        &:hover{
+            box-shadow: 5px 5px 20px 0px #000000ad;
+        }
+
+        div.card-content-top{
+            img{
+                width: 100px;
+                height: 100px;
+                margin-bottom: 5vh;
+                background-color: #dbe3eb;
+            }
+
+            h4{
+                color: #dbe3eb;
+                margin-bottom: 4vh;
+            }
+
+            div.info-content{
+                align-items: center;
+                @include GridLayout-Columns(repeat(2, 1fr));
+
+                span.id{
+                    font-weight: bold;
+                    color: #f7caa0;
+                }
+
+                div{
+                    @include GridLayout-Columns(repeat(1, 1fr));
+
+                    span.type{
+                        padding: 5px 7px;
+                        margin-bottom: 2vh;
+                        color: #dbe3eb;
+                        background-color: #393a3a;
+    
+                        &:last-child{
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    
+        div.card-content-bot{
+            display: flex;
+
+            div.col.status{
+                gap: 12px;
+                display: flex;
+                flex-direction: column;
+
+                span, p{
+                    color: #dbe3eb;
+                }
+
+                span{
+                    font-size: 23px;
+                    font-weight: bold;
+                }
+                
+                p{
+                    font-size: 1.2rem;
+                    letter-spacing: 2px;
+                    margin-bottom: 0 !important;
+                    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                }
+            }
+        }
+    }
+}

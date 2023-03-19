@@ -1,3 +1,5 @@
+@import '../assets/sass/variables';
+
 footer{
     width: 100%;
     padding: 20px;
@@ -13,6 +15,38 @@ footer{
         img.angular-icon{
             width: 100px;
             height: 100px;
+        }
+    }
+
+    div.mid-footer{
+        gap: 20px;
+        @include GridLayout-Columns(repeat(3, 1fr));
+
+        div.column-contacts{
+            div.contacts-header{
+                text-align: center;
+                h4{
+                    font-size: 2rem;
+                    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                }
+            }
+
+            div.contacts-body {
+                text-align: center;
+
+                article{
+                    margin-bottom: 1vh;
+                }
+            }
+        }
+
+        @include screenTablet{
+            place-items: center;
+            @include GridLayout-Columns(repeat(1, 1fr));
+
+            div.column-contacts{
+                width: 50vw;
+            }
         }
     }
 
