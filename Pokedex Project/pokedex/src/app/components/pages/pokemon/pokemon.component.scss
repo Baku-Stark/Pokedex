@@ -21,7 +21,7 @@ button#search{
 
 div.col{
     gap: 20px;
-    @include GridLayout-Columns(repeat(3, 1fr));
+    @include GridLayout-Columns(repeat(4, 1fr));
 
     @include screenTablet-low{
         @include GridLayout-Columns(repeat(2, 1fr));
@@ -37,6 +37,7 @@ div.col{
         background-color: #111111;
 
         &:hover{
+            transition: $tran-03;
             box-shadow: 5px 5px 20px 0px #000000ad;
         }
 
@@ -49,8 +50,9 @@ div.col{
             }
 
             h4{
-                color: #dbe3eb;
                 margin-bottom: 4vh;
+                text-transform: capitalize;
+                color: #dbe3eb;
             }
 
             div.info-content{

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { EventEmitterService } from 'src/app/events/event-emitter.service';
 
 @Component({
   selector: 'app-pokemon',
@@ -6,14 +7,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./pokemon.component.scss']
 })
 export class PokemonComponent {
-  async fentchPokemon(event:any){
+  pokemons:any = []
 
-    const APIResponse = await fetch(`https://pokeapi.co/api/v2/pokemon`)
-
-    if(APIResponse.status === 200){
-      const data = await APIResponse.json()
-
-      console.log(data.results)
-    }
+  searchPokemon(event:any){
+    console.log('Procurando pokémon')
   }
+
+  constructor(
+    private eventEmitterService: EventEmitterService
+  ){ }
+
+  async ngOnInit(){ 
+    this.pokemons = await this.eventEmitterService.fetchPokemon()
+
+  }
+
 }

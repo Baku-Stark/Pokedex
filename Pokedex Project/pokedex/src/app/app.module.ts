@@ -9,6 +9,7 @@ import { HomeComponent } from './components/pages/home/home.component';
 import { AboutComponent } from './components/pages/about/about.component';
 import { PokemonComponent } from './components/pages/pokemon/pokemon.component';
 import { NewPkmnComponent } from './components/pages/new-pkmn/new-pkmn.component';
+import { EventEmitterService } from './events/event-emitter.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,9 @@ import { NewPkmnComponent } from './components/pages/new-pkmn/new-pkmn.component
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    EventEmitterService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
