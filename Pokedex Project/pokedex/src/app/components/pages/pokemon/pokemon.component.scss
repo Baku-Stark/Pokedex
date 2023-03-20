@@ -5,20 +5,6 @@ input#search{
     padding: 10px;
 }
 
-button#search{
-    border: none;
-    padding: 13px 15px;
-    background-color: #dbe3eb;
-
-    i{
-        font-weight: bold;
-    }
-
-    &:hover{
-        background-color: #bcc3ca;
-    }
-}
-
 div.col{
     gap: 20px;
     @include GridLayout-Columns(repeat(4, 1fr));

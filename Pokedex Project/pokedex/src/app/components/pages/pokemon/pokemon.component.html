@@ -5,6 +5,9 @@
             <span class="sub">
                 Pesquise informações sobre algum POKÉMON!
             </span>
+            <span class="sub">
+                (N° de Pokémons: {{pokemons.length}})
+            </span>
         </div>
         <div class="col-12 body">
             <div class="search-content">
@@ -12,14 +15,10 @@
                     type="text"
                     id="search"
                     name="search"
-                    placeholder="Procurar Pokémon... (N° de Pokémons: {{pokemons.length}})"
+                    placeholder="Procurar Pokémon..."
+                    (input)="searchPokemon($event)"
                     required
                 >
-                <button
-                    id="search"
-                    (click)="searchPokemon($event)">
-                    <i class="bi bi-search"></i>
-                </button>
             </div>
         </div>
         <div class="col-12 body">

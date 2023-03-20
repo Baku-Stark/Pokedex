@@ -10,8 +10,7 @@ export class EventEmitterService {
 
   pokemonsList:any = []
 
-  constructor(
-  ) { }
+  constructor() { }
 
   async fetchPokemon(){
 
