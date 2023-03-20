@@ -218,3 +218,17 @@
 * `ng generate environments` (Usando a CLI do Angular, comece executando o comando gerar ambientes mostrado aqui para criar o diretório `src/environments/` e configurar o projeto para usar esses arquivos.)
 
 </details>
+
+<div align="center">
+
+<hr>
+
+# Pokedex | Angular Js <br> (HOME)
+
+</div>
+
+<div align="center">
+
+<img src="assets/img/image.png" />
+
+</div>
