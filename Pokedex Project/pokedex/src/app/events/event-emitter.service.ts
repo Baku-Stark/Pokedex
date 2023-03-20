@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class EventEmitterService {
   pokeAPI = 'https://pokeapi.co/api/v2/pokemon'
 
-  pokemon_numbers = 20
+  pokemon_numbers = 151
 
   pokemonsList:any = []
 
@@ -20,15 +20,18 @@ export class EventEmitterService {
       
       if(APIResponse.status === 200){
         const pokemon = await APIResponse.json()
-
-        console.log(pokemon.name)
         
         this.pokemonsList.push(pokemon)
 
       }
     }
 
-    console.log(this.pokemonsList)
+    const statusCDN = '[ ANGULAR ]'
+    const message = 'Ativação completa!'
+    console.log(`%c ${statusCDN} %c ${message} `, 
+        'background: #C4473A; color: #f0eff5; font-weight: bold;',
+        'background: #f0f8ff; color: #111111; font-weight: bold;'
+    );
 
     return this.pokemonsList
   }

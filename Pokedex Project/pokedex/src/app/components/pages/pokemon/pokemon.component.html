@@ -30,7 +30,7 @@
                         <div class="container">
                             <div class="header-content">
                                 <div class="img-pokemon">
-                                    <img src="" alt="">
+                                    <img src="{{pokemon.sprites.front_default}}" alt="">
                                 </div>
                             </div>
                             <div class="title-content">
@@ -41,34 +41,42 @@
                                     #{{pokemon.id}}
                                 </span>
 
-                                <div>
-                                    <span class="type">
-                                    Fire
-                                    </span>
-                                    <span class="type">
-                                        Ice
-                                    </span>
-                                </div>
+                                <ng-container *ngFor="let pokemonType of pokemon.types">
+                                    <div>
+                                        <span class="type {{pokemonType.type.name}}">
+                                            {{pokemonType.type.name}}
+                                        </span>
+                                    </div>
+                                </ng-container>
+
                             </div>
                         </div>
                     </div>
+
                     <hr>
+
                     <div class="card-content-bot">
                         <div class="col status">
-                            <span>30</span>
+                            <span>
+                                {{pokemon.stats[0].base_stat}}
+                            </span>
                             <p>HP</p>
                         </div>
                         <div class="col status">
-                            <span>30</span>
+                            <span>
+                                {{pokemon.stats[1].base_stat}}
+                            </span>
                             <p>ATK</p>
                         </div>
                         <div class="col status">
-                            <span>30</span>
+                            <span>
+                                {{pokemon.stats[2].base_stat}}
+                            </span>
                             <p>DEF</p>
                         </div>
                     </div>
+
                 </div>
-                
             </div>
         </div>
     </div>

@@ -46,7 +46,6 @@ div.col{
                 width: 100px;
                 height: 100px;
                 margin-bottom: 5vh;
-                background-color: #dbe3eb;
             }
 
             h4{
@@ -56,10 +55,13 @@ div.col{
             }
 
             div.info-content{
+                gap: 15px;
                 align-items: center;
-                @include GridLayout-Columns(repeat(2, 1fr));
+                @include GridLayout-Columns(1fr 1fr 1fr);
 
                 span.id{
+                    margin-top: 2vh;
+                    margin-bottom: 2vh;
                     font-weight: bold;
                     color: #f7caa0;
                 }
@@ -69,13 +71,76 @@ div.col{
 
                     span.type{
                         padding: 5px 7px;
-                        margin-bottom: 2vh;
-                        color: #dbe3eb;
-                        background-color: #393a3a;
-    
-                        &:last-child{
-                            margin-left: 0;
-                        }
+                        font-weight: bold;
+                        color: #111111;
+                    }
+
+                    .fire{
+                        background-color: #fd1414;
+                    }
+
+                    .grass{
+                        background-color: #adff2f;
+                    }
+
+                    .water{
+                        background-color: #2121fa;
+                    }
+
+                    .normal{
+                        background-color: #f0f8ff;
+                    }
+
+                    .poison{
+                        background-color: #8002bb;
+                    }
+
+                    .ghost{
+                        background-color: #470366;
+                    }
+
+                    .bug{
+                        background-color: #6bb100;
+                    }
+
+                    .electric{
+                        background-color: #ffff00;
+                    }
+
+                    .ground{
+                        background-color: #3b2202;
+                    }
+
+                    .rock{
+                        background-color: #804902;
+                    }
+
+                    .dragon{
+                        background-color: #cb9200;
+                    }
+
+                    .fighting{
+                        background-color: #cb3a00;
+                    }
+
+                    .ice{
+                        background-color: #00ced1;
+                    }
+
+                    .psychic{
+                        background-color: #9932cc;
+                    }
+
+                    .fairy{
+                        background-color: #ff1493;
+                    }
+
+                    .flying{
+                        background-image: linear-gradient(to bottom, #00ffff, #f0f8ff 68%);
+                    }
+
+                    .steel{
+                        background-image: linear-gradient(to bottom, #fcffff, #abacad 68%);
                     }
                 }
             }
