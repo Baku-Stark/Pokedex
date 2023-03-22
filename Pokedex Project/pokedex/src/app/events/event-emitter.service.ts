@@ -14,6 +14,8 @@ export class EventEmitterService {
 
   async fetchPokemon(){
 
+    this.pokemonsList.length = 0
+
     for(let i = 1; i <= this.pokemon_numbers; i++){
       const APIResponse = await fetch(`${this.pokeAPI}/${i}`)
       

@@ -24,58 +24,73 @@
         <div class="col-12 body">
             <div class="col">
 
-                <div class="card-content" *ngFor="let pokemon of pokemons">
-                    <div class="card-content-top">
-                        <div class="container">
-                            <div class="header-content">
-                                <div class="img-pokemon">
-                                    <img src="{{pokemon.sprites.front_default}}" alt="">
+                <div 
+                    class="block-content"
+                    *ngIf="pokemons.length > 0; else Loading">
+
+                    <div class="card-content" *ngFor="let pokemon of pokemons">
+    
+                        <div class="card-content-top">
+                            <div class="container">
+                                <div class="header-content">
+                                    <div class="img-pokemon">
+                                        <img src="{{pokemon.sprites.front_default}}" alt="">
+                                    </div>
+                                </div>
+                                <div class="title-content">
+                                    <h4>{{pokemon.name}}</h4>
+                                </div>
+                                <div class="info-content">
+                                    <span class="id">
+                                        #{{pokemon.id}}
+                                    </span>
+    
+                                    <ng-container *ngFor="let pokemonType of pokemon.types">
+                                        <div>
+                                            <span class="type {{pokemonType.type.name}}">
+                                                {{pokemonType.type.name}}
+                                            </span>
+                                        </div>
+                                    </ng-container>
+    
                                 </div>
                             </div>
-                            <div class="title-content">
-                                <h4>{{pokemon.name}}</h4>
-                            </div>
-                            <div class="info-content">
-                                <span class="id">
-                                    #{{pokemon.id}}
+                        </div>
+    
+                        <hr>
+    
+                        <div class="card-content-bot">
+                            <div class="col status">
+                                <span>
+                                    {{pokemon.stats[0].base_stat}}
                                 </span>
-
-                                <ng-container *ngFor="let pokemonType of pokemon.types">
-                                    <div>
-                                        <span class="type {{pokemonType.type.name}}">
-                                            {{pokemonType.type.name}}
-                                        </span>
-                                    </div>
-                                </ng-container>
-
+                                <p>HP</p>
+                            </div>
+                            <div class="col status">
+                                <span>
+                                    {{pokemon.stats[1].base_stat}}
+                                </span>
+                                <p>ATK</p>
+                            </div>
+                            <div class="col status">
+                                <span>
+                                    {{pokemon.stats[2].base_stat}}
+                                </span>
+                                <p>DEF</p>
                             </div>
                         </div>
-                    </div>
-
-                    <hr>
-
-                    <div class="card-content-bot">
-                        <div class="col status">
-                            <span>
-                                {{pokemon.stats[0].base_stat}}
-                            </span>
-                            <p>HP</p>
-                        </div>
-                        <div class="col status">
-                            <span>
-                                {{pokemon.stats[1].base_stat}}
-                            </span>
-                            <p>ATK</p>
-                        </div>
-                        <div class="col status">
-                            <span>
-                                {{pokemon.stats[2].base_stat}}
-                            </span>
-                            <p>DEF</p>
-                        </div>
+    
                     </div>
 
                 </div>
+                <ng-template #Loading>
+                    <div class="loader">
+                        <div class="loader-spinner"></div>
+                        <p class="loader-text">
+                            CARREGANDO
+                        </p>
+                    </div>
+                </ng-template>
             </div>
         </div>
     </div>

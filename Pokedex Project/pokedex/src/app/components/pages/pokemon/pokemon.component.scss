@@ -5,7 +5,9 @@ input#search{
     padding: 10px;
 }
 
-div.col{
+
+// ========== CARD CONTENT ==========
+div.col div.block-content{
     gap: 20px;
     @include GridLayout-Columns(repeat(4, 1fr));
 
@@ -157,5 +159,30 @@ div.col{
                 }
             }
         }
+    }
+}
+// ========== END OF CARD CONTENT ==========
+
+div.col div.loader{
+    @include FlexBox-Custom(column, center);
+
+    div.loader-spinner{
+        width: 14rem;
+        height: 14rem;
+        border-radius: 50%;
+        margin-bottom: 5vh;
+        border-left: 4px solid dimgrey;
+        animation: spin 1.5s linear infinite;
+    }
+
+    p.loader-text{
+        font-size: 1.2rem;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+}
+
+@keyframes spin{
+    to{
+        transform: rotate(360deg);
     }
 }
