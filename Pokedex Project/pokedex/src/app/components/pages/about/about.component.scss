@@ -1,0 +1,40 @@
+div.body{
+    display: flex;
+    justify-content: center;
+
+    table{
+        border-collapse: collapse;
+    
+        th, td{
+            padding: 10px;
+            border: 2px solid #111111;
+        }
+    
+        tr{
+            text-align: center;
+        }
+
+        tr.sub-title th{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    
+        th{
+            color: #f0f8ff;
+            background-color: #111111;
+        }
+
+        td{
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+            i{
+                font-size: 4rem;
+                color: #008b8b;
+            }
+
+            img{
+                width: 25vw;
+                height: 40vh;
+            }
+        }
+    }
+}

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { EventEmitterService } from 'src/app/events/event-emitter.service';
 
 @Component({
   selector: 'app-about',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent {
+
+  constructor(
+    private eventEmitterService: EventEmitterService
+  ){ }
+
+  pkmnQTD = this.eventEmitterService.pokemon_numbers
 
 }
